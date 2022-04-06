@@ -1,0 +1,43 @@
+
+<div>
+    <form [formGroup]="formdata" >
+     Enter Comment Id <input type="text" name="cid" [(ngModel)]="comt.cid" placeholder="CustomerId" formControlName="cid" />
+      <br>
+      <div *ngIf="formdata.controls['cid'].errors?.['required']">
+        Cid should not be empty.
+      </div>
+  
+      <div *ng ngIf="formdata.controls[cid'].errors?.minLength">
+        Cid must be atleast 4 characters long.
+      </div>
+     Enter Commenter <input type="text" name="commenter" [(ngModel)]="comt.commenter" placeholder="Commenter" formControlName="commenter" />
+      <div *ngIf="formdata.controls['commenter'].errors?.['required']">
+        commenter name is required.
+      </div>
+      <br>
+  
+     Enter Post Id <input type="text" name="pid" [(ngModel)]="comt.pid" placeholder="Post Id" formControlName="pid" />
+      <div *ngIf="formdata.controls['pid'].errors?.['required']">
+        Pid should not be empty.
+      </div>
+  
+      <div *ng ngIf="formdata.controls[pid'].errors?.minLength">
+        Pid must be atleast 4 characters long.
+      </div>
+      <br>
+
+     Enter Comment <input type="text" name="comment" [(ngModel)]="comt.comment" placeholder="Comment" formControlName="comment" />
+      <div *ngIf="formdata.controls['comment'].errors?.['required']">
+        comment is required.
+      </div>
+      <br>
+  
+      <input type="button" (click)="deleteCommentsByCid()" value="Delete" />
+    </form>
+  </div>
+
+
+
+
+
+

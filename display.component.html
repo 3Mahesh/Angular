@@ -1,0 +1,20 @@
+<!--<button type="submit" (click)="getAllComments()" >Show Data</button> -->
+
+<table class="table table-striped">  
+    <thead>  
+        <tr>  
+            <th>Cid</th>  
+            <th>Commenter</th>  
+            <th>Pid</th>  
+            <th>Comment</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let comment of cmts">  
+            <td>{{comment.cid}}</td>  
+            <td>{{comment.commenter}}</td>  
+            <td>{{comment.pid}}</td>  
+            <td>{{comment.comment}}</td>  
+        </tr>  
+    </tbody>  
+</table>  
